@@ -1,6 +1,9 @@
+import { LuPopcorn } from "react-icons/lu";
+
 const Banner = () => {
     return (
         <section className="banner">
+            <LuPopcorn />
             <div className="banner-txt">
                 <div>
                     <p>5,500이면 만날 수 있는 넷플릭스</p>

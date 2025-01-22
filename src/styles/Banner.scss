@@ -1,20 +1,29 @@
 .banner{
     @include component-size;
+    margin: 40px auto 0;
     padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     transition: 0.5s;
     &:hover{
         transform: scale(1.05);
         filter: brightness(1.2);
     }
+    svg{
+        margin-right: 10px;
+        font-size: 50px;
+    }
 }
 .banner-txt{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     border-radius: 10px;
     padding: 20px;
-    background-image: linear-gradient(to left, #261c63, #4d3674);
+    background-image: linear-gradient(to left, #130e32, #3d2a5c);
     button{
         @include button-style;
-        background-color: #444;
+        background-color: #3c3251;
     }
 }

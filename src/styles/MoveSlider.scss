@@ -1,0 +1,52 @@
+.move-slider{
+    h2{
+        @include htwofont;
+    }
+    .slick-list{
+        padding: 20px;
+    }
+    @include component-size;
+    .slick-prev::before,.slick-next::before{
+        content: '';
+    }
+    .slick-prev,.slick-next{
+        width: 24px;
+        height: 140px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+    }
+    //     position: absolute;
+    //     top: 50%;
+    //     z-index: 10;
+    // }
+    // .slick-prev{
+    //     left: 0;
+    // }
+    // .slick-next{
+    //     right: 0;
+    // }
+}
+.movie-card{
+    position: relative;
+    width: 100%;
+    margin: 0 15 px;
+    img{
+        width: 230px;
+        border-radius: 10px;
+    }
+    &:hover{
+        transform: scale(1.05);
+    }
+    span{
+        position: absolute;
+        left: -10px;
+        bottom: 0;
+        font-size: 100px;
+        font-weight: bolder;
+        color: #000;
+        text-shadow:    -2px -2px 0 #fff, //왼쪽 위
+                        2px -2px 0 #fff,  //오른쪽 위
+                        -2px 2px 0 #fff,  //왼쪽 아래
+                        2px 2px 0 #fff;   //오른쪽 아래
+    }
+}
