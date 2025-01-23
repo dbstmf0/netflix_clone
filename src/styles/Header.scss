@@ -43,6 +43,9 @@ nav{
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
+    @include responsive($breakpoint-medium){
+        width: 500px;
+    }
     h2{
         font-size: 70px;
         margin-bottom: 1rem;
@@ -53,9 +56,20 @@ nav{
     h4{
         font-size: $font-size-medium;
         margin-bottom: 2rem;
+        @include responsive($breakpoint-medium){
+            font-size: $font-size-small;
+        }
     }
     .membership{
         @include component-size;
         width: 100%;
+        .email-box{
+            width: 100%;
+        }
+        p{
+            @include responsive($breakpoint-medium){
+                font-size: 16px;
+            }
+        }
     }
 }

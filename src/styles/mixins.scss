@@ -18,7 +18,7 @@
 }
 
 @mixin component-size{
-    width: 80%;
+    width: 65%;
     margin: 0 auto;
 }
 
@@ -30,5 +30,8 @@
 
 @mixin htwofont{
     font-size: 40px;
-    margin: 40px auto 10px;
+    margin: 40px auto 20px;
+    @include responsive($breakpoint-medium){
+        font-size: 30px;
+    }
 }

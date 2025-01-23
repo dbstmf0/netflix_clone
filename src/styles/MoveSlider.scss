@@ -2,9 +2,6 @@
     h2{
         @include htwofont;
     }
-    .slick-list{
-        padding: 20px;
-    }
     @include component-size;
     .slick-prev::before,.slick-next::before{
         content: '';
@@ -12,6 +9,7 @@
     .slick-prev,.slick-next{
         width: 24px;
         height: 140px;
+        margin: 0 -30px;
         background-color: rgba(255, 255, 255, 0.1);
         border-radius: 10px;
     }
@@ -29,10 +27,15 @@
 .movie-card{
     position: relative;
     width: 100%;
-    margin: 0 15 px;
     img{
-        width: 230px;
+        width: 200px;
+        height: 300px;
         border-radius: 10px;
+        @include responsive($breakpoint-medium){
+            width: 150px;
+            height: 200px;
+            padding: 10px;
+        } 
     }
     &:hover{
         transform: scale(1.05);
@@ -48,5 +51,10 @@
                         2px -2px 0 #fff,  //오른쪽 위
                         -2px 2px 0 #fff,  //왼쪽 아래
                         2px 2px 0 #fff;   //오른쪽 아래
+        @include responsive($breakpoint-medium){
+            font-size: 60px;
+            left: 5px;
+            bottom: 10px;
+        } 
     }
 }

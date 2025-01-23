@@ -6,6 +6,9 @@
     align-items: center;
     justify-content: space-between;
     transition: 0.5s;
+    @include responsive($breakpoint-small){
+        width: 100%;
+    } 
     &:hover{
         transform: scale(1.05);
         filter: brightness(1.2);
@@ -22,8 +25,16 @@
     border-radius: 10px;
     padding: 20px;
     background-image: linear-gradient(to left, #130e32, #3d2a5c);
+    p{
+        @include responsive($breakpoint-small){
+            font-size: 14px;
+        } 
+    }
     button{
         @include button-style;
         background-color: #3c3251;
+        @include responsive($breakpoint-small){
+            padding: 0.3rem 0.3rem;
+        } 
     }
 }
