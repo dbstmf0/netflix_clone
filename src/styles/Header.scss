@@ -6,7 +6,6 @@ header{
 
 nav{
     @include component-size;
-    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,8 +13,9 @@ nav{
         width: 85%;
     }
     h1{
-        font-size: 50px;
-        color: $primary-color;
+        img{
+            width: 170px;
+        }
     }
     div{
         display: flex;
